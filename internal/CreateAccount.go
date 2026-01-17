@@ -4,7 +4,10 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"github.com/thurvaz/CliDeBanco/config"
 )
+
+var db = config.GetSQLite()
 
 var CreateAccount = &cobra.Command{
 	Use:  "createaccount [name] [cpf] [password]",
@@ -18,7 +21,8 @@ var CreateAccount = &cobra.Command{
 			cpf = args[1]
 			password = args[2]
 		}
-		fmt.Printf("Account Created, %s %s %s", name, cpf, password)
+		fmt.Printf("Conta criada %s %s %s", name, cpf, password)
+
 		return nil
 	},
 }

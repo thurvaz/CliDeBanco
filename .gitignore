@@ -1,0 +1,8 @@
+*.exe
+*.db
+*so
+*.dylib
+
+*.test
+
+db/
